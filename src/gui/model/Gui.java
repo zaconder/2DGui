@@ -1,5 +1,6 @@
 package gui.model;
 
+
 public class Gui implements Comparable
 {
 	private String name;
@@ -68,14 +69,16 @@ public class Gui implements Comparable
 	public int compareTo(Object comparedTemp)
 	{
 		int compared = 0;
-		
-		if(this.temp < ((Gui) comparedTemp).getTemp() || (!this.isCool && ((Gui) comparedTemp).isCool()) )
+		if (comparedTemp instanceof Gui)
 		{
-			compared = -1;
-		}
-		else if(this.temp > ((Gui) comparedTemp).getTemp() || (this.isCool && !((Gui) comparedTemp).isCool()) )
-		{
-			compared = 1;
+			if(this.temp < ((Gui) comparedTemp).getTemp() || (!this.isCool && ((Gui) comparedTemp).isCool()) )
+			{
+				compared = -1;
+			}
+			else if(this.temp > ((Gui) comparedTemp).getTemp() || (this.isCool && !((Gui) comparedTemp).isCool()) )
+			{
+				compared = 1;
+			}
 		}
 		return compared;
 	}

@@ -47,7 +47,7 @@ public class GuiAppController
 				{
 					double temp = Math.random() * 12;
 					boolean isCool;
-					if( ((int) temp) % 45 == 17)
+					if(temp < 32)
 					{
 						isCool = true;
 					}

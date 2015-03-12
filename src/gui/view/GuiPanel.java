@@ -59,10 +59,11 @@ public class GuiPanel extends JPanel
 
 	private void setupPanel()
 	{
-		this.setBackground(Color.BLUE);
+		this.setLayout(baseLayout);
+		this.setBackground(Color.CYAN);
 		this.add(appLabel);
 		this.add(tablePane);
-		this.setLayout(baseLayout);
+
 		
 	}
 
